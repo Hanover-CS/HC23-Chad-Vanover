@@ -12,9 +12,10 @@
 4. Written by Michael Zaghi, [this][4] is an article that focuses on a bunch of different chess programs and evaluates them on different scales, like the ui, features and community itself. I figured it would be helpful to get a second opinion on what aspects of these programs were successful and what were not. The author has placed Lichess at the top, with chess.com following, then a couple of others that I'm not familiar with. 
 
     What chess.com has that Lichess doesn't is the player base. It's not that Lichess doesn't have a decent following, but chess.com has a significantly larger one, which is worth noting in a program where you match up with others online. However, Lichess' more "streamlined" design seems to be more preferred as expected. A huge difference that the article mentions is that the extensive learning features both sites have differ in that they are relatively free on Lichess, unlike chess.com. Though it also mentions that chess.com may be one of the only chess sites to feature daily chess.
-
+5. I'm including [this article][5] as I was interested in how these programs compare to mobile apps rather than online sites. The writer of the article, kit_carmelite, mentions that a variety of features on Lichess' site are missing on the mobile app version. While this isn't necessarily reason enough to discourage me from making an app, perhaps some of these features are more difficult to implement on such a medium. The article then extensively covers Lichess as a site. Based on this and my lack of experience with mobile apps, I probably will refrain from making an app.
 
 [1]: https://lichess.org/
 [2]: https://www.chessmultiplayer.com/
 [3]: https://www.chess.com/
 [4]: https://medium.com/getting-into-chess/the-best-websites-to-play-online-chess-in-2021-e6c7c6e2430e
+[5]: https://medium.com/getting-into-chess/lichess-features-on-browser-lacking-on-mobile-app-1774736a36f3
