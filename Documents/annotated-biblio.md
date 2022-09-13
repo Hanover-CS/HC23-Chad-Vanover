@@ -14,9 +14,10 @@
     Comment: What chess.com has that Lichess doesn't is the player base. It's not that Lichess doesn't have a decent following, but chess.com has a significantly larger one, which is worth noting in a program where you match up with others online. However, Lichess' more "streamlined" design seems to be more preferred as expected. A huge difference that the article mentions is that the extensive learning features both sites have differ in that they are relatively free on Lichess, unlike chess.com. Though it also mentions that chess.com may be one of the only chess sites to feature daily chess.
 5. I'm including [this article][5] as I was interested in how these programs compare to mobile apps rather than online sites. The writer of the article, kit_carmelite, mentions that a variety of features on Lichess' site are missing on the mobile app version. While this isn't necessarily reason enough to discourage me from making an app, perhaps some of these features are more difficult to implement on such a medium. The article then extensively covers Lichess as a site. Based on this and my lack of experience with mobile apps, I probably will refrain from making an app.
 ---
-## Languages
+## Languages/Frameworks
 1. [This][6] article, written by Sololearn, discusses quite a bit about making a chess engine; however, for now I'm focusing on its section about languages. According to it, C++ is the most optimal choice for one to create a high speed engine, as well as its ability to handle AI. It also mentions Python as a valid option for its simplicity. Java would be ideal for "portability." Ruby also gets an honorable mention alongside Python.
 2. According to [this][7] wiki, chess programming is dominated by C and C++, probably due to the efficiency of the languages. There are some mentioned alternatives, like Booost and CuckooChess.
+3. [Electron][8] is a framework used for creating desktop apps. 
 
 [1]: https://lichess.org/
 [2]: https://www.chessmultiplayer.com/
@@ -25,3 +26,4 @@
 [5]: https://medium.com/getting-into-chess/lichess-features-on-browser-lacking-on-mobile-app-1774736a36f3
 [6]: https://medium.com/sololearn/loved-the-queens-gambit-learn-to-code-your-own-chess-engine-a0e0628db66b
 [7]: https://www.chessprogramming.org/Languages
+[8]: https://www.electronjs.org/
