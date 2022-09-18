@@ -17,7 +17,8 @@
 ## Languages/Frameworks
 1. [This][6] article, written by Sololearn, discusses quite a bit about making a chess engine; however, for now I'm focusing on its section about languages. According to it, C++ is the most optimal choice for one to create a high speed engine, as well as its ability to handle AI. It also mentions Python as a valid option for its simplicity. Java would be ideal for "portability." Ruby also gets an honorable mention alongside Python.
 2. According to [this][7] wiki, chess programming is dominated by C and C++, probably due to the efficiency of the languages. There are some mentioned alternatives, like Booost and CuckooChess.
-3. [Electron][8] is a framework used for creating desktop apps. 
+3. [Electron][8] is a framework used for creating cross-platform desktop apps. It uses Chromium and Node.js, along with Javascript, HTML and CSS.
+4. [This][9] is an article listing several frameworks for building desktop apps. The article places Electron at number 2, noting that it is a solid pick for experienced developers making "heavy-duty" applications. It has Tauri at number 1, describing it as suitable for small-sized applications.
 
 [1]: https://lichess.org/
 [2]: https://www.chessmultiplayer.com/
@@ -27,3 +28,5 @@
 [6]: https://medium.com/sololearn/loved-the-queens-gambit-learn-to-code-your-own-chess-engine-a0e0628db66b
 [7]: https://www.chessprogramming.org/Languages
 [8]: https://www.electronjs.org/
+[9]: https://geekflare.com/build-desktop-apps-tools/
+[10]: 
