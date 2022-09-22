@@ -21,7 +21,8 @@ With Electron in mind, I knew I'd be working with Javascript. As such, I looked 
 ## Competition
 ### Lichess
 Lichess [1] is a very popular chess program for a variety of players. It's a competing program in regards to mine as it is an open source multiplayer chess program. It is under the [AGPL license](https://en.wikipedia.org/wiki/GNU_Affero_General_Public_License). Users can play games with random people, friends and AI. It also offers a coaching system where users can request help from excellent players. Further, users can make an account to track their progress. I plan for my program to be open source as well as letting players play against each other. However, I'm not sure if coaching will be entirely feasible. I won't be making any sort of account system, as I find users can be deterred from a program as soon as it asks them to make an account. 
-![image](./images/lichess.png){:width="200%"} <img src="./images/lichess.png"  width="25%"/>
+
+<img src="./images/lichess.png"  width="50%"/>
 
 Additionally, I believe the average user of a chess program won't need so many features. The myriad of options to choose from only serve to bloat the screen and make it less accessible to some users, like new players just wanting to play a game of chess. This is partly why I've decided to go the desktop app route, so that users can get straight into a game without having to know how to navigate such a webpage.
 ### chess.com
