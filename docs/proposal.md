@@ -9,26 +9,51 @@ Its feature set will contain all of the handy functions that a typical chess pro
     - Can be configured to randomize only at game start, or perhaps after every turn.
     - Every game will be different!
 ## Languages/Frameworks
-After looking through a variety of frameworks, I settled on working with [Electron](https://www.electronjs.org/). It's a framework that uses Javascript, CSS and HTML to package my program into a desktop app. I decided to make my program a desktop application to make getting into a game of chess as quick and seamless as possible. Instead of having to search the web for a chess program, users can simply boot up the game from their desktop or wherever they have it stored and immediately get into a game. Additionally, unlike other popular options like Lichess or Chess.com, it doesn't even matter if one doesn't have internet access at the time, as it is a desktop app. Thus, users can even use Cheesy offline. Some other honorable framework mentions include: 
-1. [Tauri](https://tauri.app/), a Rust framework for fast applications,
-2. [Neutralino](https://neutralino.js.org/), a light alternative to Electron,
-3. [Xojo](https://www.xojo.com/), a beginner friendly drag-and-drop framework, and
-4. [OS.js](https://www.os-js.org/) a powerful framework with solid support.
+After looking through a variety of frameworks, I settled on working with [Electron][1] `[1]`. It's a framework that uses Javascript, CSS and HTML to package my program into a desktop app. I decided to make my program a desktop application to make getting into a game of chess as quick and seamless as possible. Instead of having to search the web for a chess program, users can simply boot up the game from their desktop or wherever they have it stored and immediately get into a game. Additionally, unlike other popular options like Lichess or Chess.com, it doesn't even matter if one doesn't have internet access at the time, as it is a desktop app. Thus, users can even use Cheesy offline. Some other honorable framework mentions include: 
+1. [Tauri][2] `[2]` a Rust framework for fast applications,
+2. [Neutralino][3] `[3]`, a light alternative to Electron,
+3. [Xojo][4] `[4]`, a beginner friendly drag-and-drop framework, and
+4. [OS.js][5] `[5]` a powerful framework with solid support.
 
  Tauri was an interesting option; it allows one to use any front-end framework alongside itself, it makes very quick applications in Rust, and it has a security team that regularly releases security patches to protect from cyber attacks. However, it has a limitation in the sense that it requires the application to be less than 600 KB in size. I decided against it due my lack of experience with Rust and worries about the the size limitation. Neutralino presents itself as an alternative to Electron, as Neutralino is less bulky. It also comes with a native API and a library using a light SDK. It's also flexible with other front-end and/or back-end frameworks. I chose Electron over this alternative because I don't quite need such flexibility nor am I concerned about Electron's bulkiness. Xojo is a beginner-friendly framework with a drag-and-drop interface, along with some handy features. It's compatible with protocols, has database and graphic support and a rapidly growing community. With its ease of use, i was considering this as an option. However, I worried it wouldn't have everything I needed because of its simplicity. Finally, OS.js was another solid option I looked into. It offers quite a lot of nice features, like a window manager, GUI toolkit, API's, filesystem abstractions, etc.. It honestly seems pretty powerful in my eyes. I'm picking Electron over it is simply because I looked into Electron first and took to it, but I could see OS.js also being a solid option.
 
-With Electron in mind, I knew I'd be working with Javascript. As such, I looked into various libraries to see if I could use any pre-existing code in my project. [Chessboard.js](https://chessboardjs.com/) paired with [Chess.js](https://github.com/jhlywa/chess.js) seem like they will be very helpful. The board is a pre-existing chess board that is customizable with an API. The documentation for it is extensive and readable, showing multiple examples on using and customizing boards. Further, it seems rather easy to embed in my project. The chess.js library claims it has code for up to everything except AI. It has a well-documented API and is headless, making it very easy to integrate with chessboard.js.
+With Electron in mind, I knew I'd be working with Javascript. As such, I looked into various libraries to see if I could use any pre-existing code in my project. [Chessboard.js][6] `[6]` paired with [Chess.js][7] `[7]` seem like they will be very helpful. The board is a pre-existing chess board that is customizable with an API. The documentation for it is extensive and readable, showing multiple examples on using and customizing boards. Further, it seems rather easy to embed in my project. The chess.js library claims it has code for up to everything except AI. It has a well-documented API and is headless, making it very easy to integrate with chessboard.js.
 ## Competition
 ### Lichess
-Lichess [1] is a very popular chess program for a variety of players. It's a competing program in regards to mine as it is an open source multiplayer chess program. It is under the [AGPL license](https://en.wikipedia.org/wiki/GNU_Affero_General_Public_License). Users can play games with random people, friends and AI. It also offers a coaching system where users can request help from excellent players. Further, users can make an account to track their progress. I plan for my program to be open source as well as letting players play against each other. However, I'm not sure if coaching will be entirely feasible. I won't be making any sort of account system, as I find users can be deterred from a program as soon as it asks them to make an account. 
+[Lichess][8] `[8]` is a very popular chess program for a variety of players. It's a competing program in regards to mine as it is an open source multiplayer chess program. It is under the [AGPL license](https://en.wikipedia.org/wiki/GNU_Affero_General_Public_License). Users can play games with random people, friends and AI. It also offers a coaching system where users can request help from excellent players. Further, users can make an account to track their progress. I plan for my program to be open source as well as letting players play against each other. However, I'm not sure if coaching will be entirely feasible. I won't be making any sort of account system, as I find users can be deterred from a program as soon as it asks them to make an account. 
 
 <img src="./images/lichess.png"  width="50%"/>
 
 Additionally, I believe the average user of a chess program won't need so many features. The myriad of options to choose from only serve to bloat the screen and make it less accessible to some users, like new players just wanting to play a game of chess. This is partly why I've decided to go the desktop app route, so that users can get straight into a game without having to know how to navigate such a webpage.
 ### chess.com
-Chess.com [2] is another popular chess program, perhaps even more than Lichess due to the disparity in player count. Lichess, as of this viewing, had 41,000 players compared to chess.com's 216,000. Its feature set is similar to Lichess in that there are a lot of cool tools for experienced users to take advantage of, but to any other user it can just result in confusion. ![image](./images/chess.com.png)It also requires an account to be set up for a user to play any sort of variant, a feature I will definitely not be making. Users would easily be discouraged from a program if it requires an account to be made to use certain features.
-### References
+[Chess.com][9] `[9]` is another popular chess program, perhaps even more than Lichess due to the disparity in player count. Lichess, as of this viewing, had 41,000 players compared to chess.com's 216,000. Its feature set is similar to Lichess in that there are a lot of cool tools for experienced users to take advantage of, but to any other user it can just result in confusion. ![image](./images/chess.com.png)It also requires an account to be set up for a user to play any sort of variant, a feature I will definitely not be making. Users would easily be discouraged from a program if it requires an account to be made to use certain features.
 
-[1] T. Duplessis, “The best free, adless chess server,” lichess.org. [Online]. Available: https://lichess.org/. [Accessed: 18-Sep-2022].
+## References
 
-[2] E. Allebest, “Play chess online - free games,” Chess.com. [Online]. Available: https://www.chess.com/. [Accessed: 18-Sep-2022]. 
+[1] C. Zhao, “Electron: Build cross-platform desktop apps with JavaScript, HTML, and CSS.,” Electron Blog RSS. [Online]. Available: https://www.electronjs.org/. [Accessed: 22-Sep-2022].
+
+[2] “Build smaller, faster, and more secure desktop applications with a web frontend: Tauri Apps,” Tauri Apps RSS. [Online]. Available: https://tauri.app/. [Accessed: 22-Sep-2022].
+
+[3] “Build lightweight cross-platform desktop apps with JavaScript, HTML, and CSS: Neutralinojs,” Neutralinojs Blog RSS. [Online]. Available: https://neutralino.js.org/. [Accessed: 22-Sep-2022]. 
+
+[4] G. Perlman, “Build native, cross-platform apps,” Xojo. [Online]. Available: https://www.xojo.com/. [Accessed: 22-Sep-2022].
+
+[5] “Os.js,” OS.js. [Online]. Available: https://www.os-js.org/. [Accessed: 22-Sep-2022].
+
+[6] “Chessboard.js,” chessboardjs.com " Homepage. [Online]. Available: https://chessboardjs.com/. [Accessed: 22-Sep-2022].
+
+[7] Jhlywa, “Jhlywa/chess.js: A Javascript Chess Library for chess move generation/validation, piece placement/movement, and check/checkmate/draw detection,” GitHub. [Online]. Available: https://github.com/jhlywa/chess.js. [Accessed: 22-Sep-2022]. 
+
+[8] T. Duplessis, “The best free, adless chess server,” lichess.org. [Online]. Available: https://lichess.org/. [Accessed: 18-Sep-2022].
+
+[9] E. Allebest, “Play chess online - free games,” Chess.com. [Online]. Available: https://www.chess.com/. [Accessed: 18-Sep-2022].
+
+[1]: https://www.electronjs.org/
+[2]: https://tauri.app/
+[3]: https://neutralino.js.org/
+[4]: https://www.xojo.com/
+[5]: https://www.os-js.org/
+[6]: https://chessboardjs.com/
+[7]: https://github.com/jhlywa/chess.js
+[8]: https://lichess.org/
+[9]: https://www.chess.com/
