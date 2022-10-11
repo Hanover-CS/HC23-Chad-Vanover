@@ -5,17 +5,25 @@
         "Biblio",
         "Booost",
         "Cheess",
+        "chessboardjs",
+        "Costalba",
         "Duplessis",
+        "Jhlywa",
+        "Kiiski",
         "Lichess",
         "mathjax",
         "Neutralino",
+        "Neutralinojs",
         "noscript",
         "randomizer",
         "replayability",
+        "Romstad",
         "Sololearn",
+        "Stockfish",
         "Tauri",
         "Thibault",
         "Xojo",
-        "Zaghi"
+        "Zaghi",
+        "Zhao"
     ]
 }
