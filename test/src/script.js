@@ -1,10 +1,15 @@
-const { Chess } = require('chess.js');
+// const { Chess } = require('chess.js');
+import { Chess } from '../node_modules/chess.js/chess.js';
+import '../node_modules/jquery/dist/jquery.js';
+import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
+
+var board = new Chessboard();
 
 const chess = new Chess();
 console.log(chess);
 console.log(chess.game_over);
 
-while (!chess.isGameOver()) {
+while (!chess.game_over) {
     const moves = chess.moves();
     const move = moves[Math.floor(Math.random() * moves.length)];
     chess.move(move);
