@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^21.1.1"
+    "electron": "^21.2.0"
   },
   "dependencies": {
     "@chrisoakman/chessboardjs": "^1.0.0",
-    "chess.js": "*"
+    "chess.js": "^0.13.4"
   }
 }
