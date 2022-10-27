@@ -1,15 +1,13 @@
-// const { Chess } = require('chess.js');
 import { Chess } from '../node_modules/chess.js/chess.js';
 import '../node_modules/jquery/dist/jquery.js';
 import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
+import { highlightMoves } from '../src/scripts/highlight.js';
 
 const game = new Chess();
 let board = null;
 const $status = $('#status');
 const $fen = $('#fen');
 const $pgn = $('#pgn');
-const whiteSquareGrey = '#a9a9a9';
-const blackSquareGrey = '#696969';
 
 console.log(game);
 console.log(game.game_over());
@@ -18,18 +16,6 @@ console.log(board);
 function removeGreySquares () {
   $('#board .square-55d63').css('background', '');
 };
-
-function greySquare (square) {
-  const $square = $('#board .square-' + square);
-
-  let background = whiteSquareGrey;
-  if ($square.hasClass('black-3c85d')) {
-    background = blackSquareGrey;
-  }
-
-  $square.css('background', background);
-}
-
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
@@ -49,7 +35,7 @@ function onDrop (source, target) {
   const move = game.move({
     from: source,
     to: target,
-    promotion: 'q', // TODO: Currently only promotes to queen
+    promotion: 'q', // TODO: Currently only promotes to queen ; dialogue html
   });
 
   // illegal move
@@ -64,17 +50,7 @@ function onMouseoverSquare (square, piece) {
     square: square,
     verbose: true
   });
-
-  // exit if there are no moves available for this square
-  if (moves.length === 0) return;
-
-  // highlight the square they moused over
-  greySquare(square);
-
-  // highlight the possible squares for this piece
-  for (var i = 0; i < moves.length; i++) {
-    greySquare(moves[i].to);
-  }
+  highlightMoves(square, moves); 
 };
 
 function onMouseoutSquare (square, piece) {
@@ -136,3 +112,5 @@ $('#clearBtn').on('click', board.clear);
 
 
 console.log("Hello, world!");
+
+export { game };
