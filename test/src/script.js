@@ -1,16 +1,16 @@
-import { Chess } from '../node_modules/chess.js/chess.js';
 import '../node_modules/jquery/dist/jquery.js';
 import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
-import { highlightMoves } from '../src/scripts/highlight.js';
+import { highlightMoves } from './scripts/highlight.js';
+import { Game } from './scripts/game.js';
 
-const game = new Chess();
+const myGame = new Game();
 let board = null;
 const $status = $('#status');
 const $fen = $('#fen');
 const $pgn = $('#pgn');
 
-console.log(game);
-console.log(game.game_over());
+console.log(myGame.game);
+console.log(myGame.game.game_over());
 console.log(board);
 
 function removeGreySquares () {
@@ -19,11 +19,11 @@ function removeGreySquares () {
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
-  if (game.game_over()) return false;
+  if (myGame.game.game_over()) return false;
 
   // only pick up current turn player's piece
-  if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
-      (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+  if ((myGame.game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+      (myGame.game.turn() === 'b' && piece.search(/^w/) !== -1)) {
     return false;
   };
 };
@@ -32,7 +32,7 @@ function onDrop (source, target) {
   removeGreySquares();
 
   // see if the move is legal
-  const move = game.move({
+  const move = myGame.game.move({
     from: source,
     to: target,
     promotion: 'q', // TODO: Currently only promotes to queen ; dialogue html
@@ -46,7 +46,7 @@ function onDrop (source, target) {
 
 function onMouseoverSquare (square, piece) {
   // get list of possible moves for this square
-  const moves = game.moves({
+  const moves = myGame.game.moves({
     square: square,
     verbose: true
   });
@@ -60,33 +60,33 @@ function onMouseoutSquare (square, piece) {
 // update the board position after the piece snap
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
-  board.position(game.fen());
+  board.position(myGame.game.fen());
 };
 
 function updateStatus () {
   let status = '';
 
   let moveColor = 'White';
-  if (game.turn() === 'b') {
+  if (myGame.game.turn() === 'b') {
     moveColor = 'Black';
   };
 
   // checkmate?
-  if (game.in_checkmate()) {
+  if (myGame.game.in_checkmate()) {
     status = 'Game over, ' + moveColor + ' is in checkmate.';
-  } else if (game.in_draw()) { // draw?
+  } else if (myGame.game.in_draw()) { // draw?
     status = 'Game over, drawn position';
   } else { // game still on
     status = moveColor + ' to move';
     // check?
-    if (game.in_check()) {
+    if (myGame.game.in_check()) {
       status += ', ' + moveColor + ' is in check';
     }
   };
 
   $status.html(status);
-  $fen.html(game.fen());
-  $pgn.html(game.pgn());
+  $fen.html(myGame.game.fen());
+  $pgn.html(myGame.game.pgn());
 }
 
 
@@ -113,4 +113,3 @@ $('#clearBtn').on('click', board.clear);
 
 console.log("Hello, world!");
 
-export { game };
