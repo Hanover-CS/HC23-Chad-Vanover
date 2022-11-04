@@ -16,6 +16,18 @@ export class Game {
     get getFen() {
         return this.game.fen();
     }
+
+    get inCheckmate() {
+        return this.game.in_checkmate();
+    }
+
+    get inCheck() {
+        return this.game.in_check();
+    }
+
+    get inDraw() {
+        return this.game.in_draw();
+    }
    
     makeMove(source, target) {
         return this.game.move({
