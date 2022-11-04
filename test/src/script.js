@@ -42,10 +42,7 @@ function onDrop (source, target) {
 
 function onMouseoverSquare (square, piece) {
   // get list of possible moves for this square
-  const moves = myGame.game.moves({
-    square: square,
-    verbose: true
-  });
+  const moves = myGame.possibleMoves(square);
   highlightMoves(square, moves); 
 };
 

@@ -18,6 +18,13 @@ export class Game {
             from: source,
             to: target,
             promotion: 'p' // TODO
-        })
+        });
+    }
+
+    possibleMoves(square) {
+        return this.game.moves({
+            square: square,
+            verbose: true
+        });
     }
 }
