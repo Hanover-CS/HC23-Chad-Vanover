@@ -19,7 +19,7 @@ function removeGreySquares () {
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
-  if (myGame.isOver()) return false;
+  if (myGame.isOver) return false;
 
   // only pick up current turn player's piece
   if ((myGame.playerTurn === 'w' && piece.search(/^b/) !== -1) ||
@@ -32,11 +32,7 @@ function onDrop (source, target) {
   removeGreySquares();
 
   // see if the move is legal
-  const move = myGame.game.move({
-    from: source,
-    to: target,
-    promotion: 'q', // TODO: Currently only promotes to queen ; dialogue html
-  });
+  const move = myGame.makeMove(source, target);
 
   // illegal move
   if (move === null) return 'snapback';

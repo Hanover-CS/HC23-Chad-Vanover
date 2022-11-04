@@ -12,4 +12,12 @@ export class Game {
     get playerTurn() {
         return this.game.turn();
     }
+   
+    makeMove(source, target) {
+        return this.game.move({
+            from: source,
+            to: target,
+            promotion: 'p' // TODO
+        })
+    }
 }
