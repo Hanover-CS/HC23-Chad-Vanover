@@ -79,7 +79,7 @@ function updateStatus () {
 
   $status.html(status);
   $fen.html(myGame.getFen);
-  $pgn.html(myGame.game.pgn());
+  $pgn.html(myGame.getPgn);
 }
 
 

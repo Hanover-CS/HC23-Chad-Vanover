@@ -17,6 +17,10 @@ export class Game {
         return this.game.fen();
     }
 
+    get getPgn() {
+        return this.game.pgn();
+    }
+
     get inCheckmate() {
         return this.game.in_checkmate();
     }
