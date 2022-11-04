@@ -10,7 +10,7 @@ const $fen = $('#fen');
 const $pgn = $('#pgn');
 
 console.log(myGame.game);
-console.log(myGame.game.game_over());
+console.log(myGame.isOver);
 console.log(board);
 
 function removeGreySquares () {
@@ -19,11 +19,11 @@ function removeGreySquares () {
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
-  if (myGame.game.game_over()) return false;
+  if (myGame.isOver()) return false;
 
   // only pick up current turn player's piece
-  if ((myGame.game.turn() === 'w' && piece.search(/^b/) !== -1) ||
-      (myGame.game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+  if ((myGame.playerTurn === 'w' && piece.search(/^b/) !== -1) ||
+      (myGame.playerTurn === 'b' && piece.search(/^w/) !== -1)) {
     return false;
   };
 };
@@ -67,7 +67,7 @@ function updateStatus () {
   let status = '';
 
   let moveColor = 'White';
-  if (myGame.game.turn() === 'b') {
+  if (myGame.playerTurn === 'b') {
     moveColor = 'Black';
   };
 
