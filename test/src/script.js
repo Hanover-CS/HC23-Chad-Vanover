@@ -9,7 +9,7 @@ const $status = $('#status');
 const $fen = $('#fen');
 const $pgn = $('#pgn');
 
-console.log(myGame.game);
+console.log(myGame);
 console.log(myGame.isOver);
 console.log(board);
 
