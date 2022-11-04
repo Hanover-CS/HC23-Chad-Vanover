@@ -53,7 +53,7 @@ function onMouseoutSquare (square, piece) {
 // update the board position after the piece snap
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
-  board.position(myGame.game.fen());
+  board.position(myGame.getFen);
 };
 
 function updateStatus () {
@@ -78,7 +78,7 @@ function updateStatus () {
   };
 
   $status.html(status);
-  $fen.html(myGame.game.fen());
+  $fen.html(myGame.getFen);
   $pgn.html(myGame.game.pgn());
 }
 

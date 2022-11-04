@@ -12,6 +12,10 @@ export class Game {
     get playerTurn() {
         return this.game.turn();
     }
+
+    get getFen() {
+        return this.game.fen();
+    }
    
     makeMove(source, target) {
         return this.game.move({
