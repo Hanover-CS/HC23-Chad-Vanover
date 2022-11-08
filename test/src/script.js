@@ -2,12 +2,10 @@ import '../node_modules/jquery/dist/jquery.js';
 import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
 import { highlightMoves } from './scripts/highlight.js';
 import { Game } from './scripts/game.js';
+import { updateStatus } from './scripts/status.js';
 
 const myGame = new Game();
 let board = null;
-const $status = $('#status');
-const $fen = $('#fen');
-const $pgn = $('#pgn');
 
 console.log(myGame);
 console.log(myGame.isOver);
@@ -37,7 +35,7 @@ function onDrop (source, target) {
   // illegal move
   if (move === null) return 'snapback';
 
-  updateStatus();
+  updateStatus(myGame);
 };
 
 function onMouseoverSquare (square, piece) {
@@ -56,31 +54,7 @@ function onSnapEnd () {
   board.position(myGame.getFen);
 };
 
-function updateStatus () {
-  let status = '';
 
-  let moveColor = 'White';
-  if (myGame.playerTurn === 'b') {
-    moveColor = 'Black';
-  };
-
-  // checkmate?
-  if (myGame.inCheckmate) {
-    status = 'Game over, ' + moveColor + ' is in checkmate.';
-  } else if (myGame.inDraw) { // draw?
-    status = 'Game over, drawn position';
-  } else { // game still on
-    status = moveColor + ' to move';
-    // check?
-    if (myGame.inCheck) {
-      status += ', ' + moveColor + ' is in check';
-    }
-  };
-
-  $status.html(status);
-  $fen.html(myGame.getFen);
-  $pgn.html(myGame.getPgn);
-}
 
 
 const config = {
@@ -96,8 +70,10 @@ const config = {
 
 board = Chessboard('board', config);
 console.log(board);
+console.log(myGame);
 
-updateStatus();
+
+updateStatus(myGame);
 
 $('#startBtn').on('click', board.start);
 $('#clearBtn').on('click', board.clear);
