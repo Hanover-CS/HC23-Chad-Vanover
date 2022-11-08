@@ -74,10 +74,5 @@ console.log(myGame);
 
 updateStatus(myGame);
 
-$('#startBtn').on('click', board.start);
-$('#clearBtn').on('click', board.clear);
-
-
-
 console.log("Hello, world!");
 
