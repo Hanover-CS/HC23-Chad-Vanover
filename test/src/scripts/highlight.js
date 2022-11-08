@@ -24,3 +24,7 @@ function greySquare (square) {
   
     $square.css('background', background);
   };
+
+  export function removeGreySquares () {
+    $('#board .square-55d63').css('background', '');
+  };

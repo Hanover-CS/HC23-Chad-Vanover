@@ -3,6 +3,7 @@ import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
 import { highlightMoves } from './scripts/highlight.js';
 import { Game } from './scripts/game.js';
 import { updateStatus } from './scripts/status.js';
+import { removeGreySquares } from './scripts/highlight.js';
 
 const myGame = new Game();
 let board = null;
@@ -11,9 +12,7 @@ console.log(myGame);
 console.log(myGame.isOver);
 console.log(board);
 
-function removeGreySquares () {
-  $('#board .square-55d63').css('background', '');
-};
+
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
