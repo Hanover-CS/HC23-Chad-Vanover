@@ -53,9 +53,6 @@ function onSnapEnd () {
   board.position(myGame.getFen);
 };
 
-
-
-
 const config = {
   draggable: true,
   position: 'start',
