@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        './webTest/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -57,15 +57,14 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true,
+        'goog:chromeOptions':  {
+            args: ['--headless']
+        },
+        acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-        'goog:chromeOptions': {
-            binary: '/path/to/your/electron/binary', // Path to your Electron binary.
-            args: [/* cli arguments */] // Optional, perhaps 'app=' + /path/to/your/app/
-          }
     }],
     //
     // ===================
@@ -98,7 +97,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: 'http://localhost:4444',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
