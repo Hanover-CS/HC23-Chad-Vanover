@@ -5,8 +5,8 @@
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "wdio": "wdio run wdio.conf.js",
-        "test": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
+        "uiTest": "wdio run wdio.conf.js",
+        "unitTest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
     },
     "keywords": [],
     "author": "",
