@@ -1,4 +1,4 @@
-import { Game } from "./game.js"
+import { Game } from "./game.mjs"
 
 const $status = $('#status');
 const $fen = $('#fen');

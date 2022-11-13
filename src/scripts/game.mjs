@@ -34,11 +34,12 @@ export class Game {
     }
    
     makeMove(source, target) {
-        return this.game.move({
+        const move = this.game.move({
             from: source,
             to: target,
             promotion: 'p' // TODO
         });
+        return move != null;
     }
 
     possibleMoves(square) {

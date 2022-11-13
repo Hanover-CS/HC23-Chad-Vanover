@@ -1,7 +1,7 @@
 import '../node_modules/jquery/dist/jquery.js';
 import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
 import { highlightMoves } from './scripts/highlight.js';
-import { Game } from './scripts/game.js';
+import { Game } from './scripts/game.mjs';
 import { updateStatus } from './scripts/status.js';
 import { removeGreySquares } from './scripts/highlight.js';
 
@@ -14,7 +14,7 @@ console.log(board);
 
 
 
-function onDragStart (source, piece, position, orientation) {
+function onDragStart (piece) {
   // do not pick up pieces if the game is over
   if (myGame.isOver) return false;
 
@@ -27,12 +27,13 @@ function onDragStart (source, piece, position, orientation) {
 
 function onDrop (source, target) {
   removeGreySquares();
+  console.log(source, target);
 
   // see if the move is legal
   const move = myGame.makeMove(source, target);
 
   // illegal move
-  if (move === null) return 'snapback';
+  if (!move) return 'snapback';
 
   updateStatus(myGame);
 };
@@ -57,7 +58,7 @@ const config = {
   draggable: true,
   position: 'start',
   pieceTheme: 'img/{piece}.png',
-  onDragStart: onDragStart,
+  onDragStart: (source, piece, position, orientation) => onDragStart(piece),
   onDrop: onDrop,
   onMouseoutSquare: onMouseoutSquare,
   onMouseoverSquare: onMouseoverSquare,
