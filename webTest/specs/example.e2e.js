@@ -8,9 +8,11 @@ describe('My Login application', () => {
         const $board = await $('#board');
         // const $square = await $board.$('.square-h2');
         // const $img = await $('.square-h2 img');
-        expect($board).toBeDisplayed();
-        expect(await $('.square-h2 img').getAttribute('data-piece')).toEqual('wP');
+        await expect($board).toBeDisplayed();
+        await expect(await $('.square-h2 img').getAttribute('data-piece')).toEqual('wP');
         await $('.square-h2 img').moveTo();
+        expect(await $$('.highlight')).toHaveLength(3);
+        await expect(await $('.square-h2.highlight')).toExist();
         // await LoginPage.open();
 
         // await LoginPage.login('tomsmith', 'SuperSecretPassword!');
