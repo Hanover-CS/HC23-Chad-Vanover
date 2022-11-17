@@ -10,12 +10,13 @@ test('can make move', () => {
   expect(game.makeMove('g2', 'g4')).toBeTruthy();
 });
 
-// test('can get possible moves', () => {
-//   const game = new Game();
-//   console.log(game.possibleMoves());
-//   expect(game.possibleMoves('e2')).toBe(['e3', 'e4', { color: 'w', flags: 'n', from: 'e2', piece: 'p', san: 'e3', to: 'e3'},
-//   { color: 'w', flags: 'b', from: 'e2', piece: 'p', san: 'e4', to: 'e4'}]);
-// });
+test('can get possible moves', () => {
+  const game = new Game();
+  expect(game.possibleMoves('e2')).toStrictEqual([
+  { color: 'w', flags: 'n', from: 'e2', piece: 'p', san: 'e3', to: 'e3'}, 
+  { color: 'w', flags: 'b', from: 'e2', piece: 'p', san: 'e4', to: 'e4'}
+  ]);
+});
 
 test('only current player can make move', () => {
   const game = new Game();
