@@ -1,8 +1,8 @@
 import { Chess } from '../../node_modules/chess.js/chess.js';
 
 export class Game {
-    constructor(){
-        this.game = new Chess();
+    constructor(fen){
+        this.game = new Chess(fen);
     }
 
     get isOver() {
@@ -37,7 +37,7 @@ export class Game {
         const move = this.game.move({
             from: source,
             to: target,
-            promotion: 'p' // TODO
+            promotion: 'q' // TODO
         });
         return move != null;
     }
