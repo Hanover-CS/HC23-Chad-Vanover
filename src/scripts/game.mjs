@@ -1,3 +1,5 @@
+// Game class handles the logic of game state
+
 import { Chess } from '../../node_modules/chess.js/chess.js';
 
 export class Game {

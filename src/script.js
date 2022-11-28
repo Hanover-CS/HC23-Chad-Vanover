@@ -1,3 +1,5 @@
+// "main" script; passes functions to chessboard config
+
 import '../node_modules/jquery/dist/jquery.js';
 import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
 import { highlightMoves } from './scripts/highlight.js';
@@ -11,8 +13,6 @@ let board = null;
 console.log(myGame);
 console.log(myGame.isOver);
 console.log(board);
-
-
 
 function onDragStart (piece) {
   // do not pick up pieces if the game is over
@@ -69,8 +69,6 @@ board = Chessboard('board', config);
 console.log(board);
 console.log(myGame);
 
-
 updateStatus(myGame);
 
 console.log("Hello, world!");
-

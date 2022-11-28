@@ -1,3 +1,5 @@
+// tests for game class
+
 import { Game } from "../src/scripts/game.mjs"
 
 test('can create new game', () => {

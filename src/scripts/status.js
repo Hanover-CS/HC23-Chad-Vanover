@@ -1,3 +1,5 @@
+// Updates the status line for the ui
+
 import { Game } from "./game.mjs"
 
 const $status = $('#status');

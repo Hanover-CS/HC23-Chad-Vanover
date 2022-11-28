@@ -1,3 +1,5 @@
+// script for handling highlights on the board
+
 export function highlightMoves (square, moves) {
     // exit if there are no moves available for this square
     if (moves.length === 0) return;
