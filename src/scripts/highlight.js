@@ -1,5 +1,15 @@
 // script for handling highlights on the board
 
+/**
+ * module description
+ * @module highlight
+ */
+
+/**
+ * Highlights squares to represent possible moves
+ * @param {String} square - The square containing a piece
+ * @param {Array} moves - An array of possible moves
+ */
 export function highlightMoves (square, moves) {
     // exit if there are no moves available for this square
     if (moves.length === 0) return;
