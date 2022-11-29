@@ -6,7 +6,8 @@
     "scripts": {
         "start": "electron .",
         "uiTest": "wdio run wdio.conf.js",
-        "unitTest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest"
+        "unitTest": "cross-env NODE_OPTIONS=--experimental-vm-modules npx jest",
+        "doc": "jsdoc -c jsdoc.json -r src"
     },
     "keywords": [],
     "author": "",
@@ -25,6 +26,7 @@
     "dependencies": {
         "@chrisoakman/chessboardjs": "^1.0.0",
         "chess.js": "^0.13.4",
-        "jquery": "^3.6.1"
+        "jquery": "^3.6.1",
+        "jsdoc": "^4.0.0"
     }
 }

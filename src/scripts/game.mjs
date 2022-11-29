@@ -1,8 +1,15 @@
 // Game class handles the logic of game state
 
 import { Chess } from '../../node_modules/chess.js/chess.js';
-
+/**
+ * The Game class
+ */
 export class Game {
+    /**
+     * Constructor for the Game class
+     * @param {*} fen
+     * @constructor
+     */
     constructor(fen){
         this.game = new Chess(fen);
     }
