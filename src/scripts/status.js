@@ -10,50 +10,50 @@
  * @type {jQuery}
  * @default
  */
-const $status = $('#status')
+const $status = $('#status');
 /**
  * @constant
  * @type {jQuery}
  * @default
  */
-const $fen = $('#fen')
+const $fen = $('#fen');
 /**
  * @constant
  * @type {jQuery}
  * @default
  */
-const $pgn = $('#pgn')
+const $pgn = $('#pgn');
 
 /**
  * Updates the status strings to the ui
  * @param {Game} myGame - A Game object
  */
 export function updateStatus (myGame) {
-  console.log(myGame)
+  console.log(myGame);
 
-  let status = ''
+  let status = '';
 
-  let moveColor = 'White'
+  let moveColor = 'White';
   if (myGame.playerTurn === 'b') {
-    moveColor = 'Black'
+    moveColor = 'Black';
   }
 
   // checkmate?
   if (myGame.inCheckmate) {
-    status = 'Game over, ' + moveColor + ' is in checkmate.'
+    status = 'Game over, ' + moveColor + ' is in checkmate.';
   } else if (myGame.inDraw) {
     // draw?
-    status = 'Game over, drawn position'
+    status = 'Game over, drawn position';
   } else {
     // game still on
-    status = moveColor + ' to move'
+    status = moveColor + ' to move';
     // check?
     if (myGame.inCheck) {
-      status += ', ' + moveColor + ' is in check'
+      status += ', ' + moveColor + ' is in check';
     }
   }
 
-  $status.html(status)
-  $fen.html(myGame.getFen)
-  $pgn.html(myGame.getPgn)
+  $status.html(status);
+  $fen.html(myGame.getFen);
+  $pgn.html(myGame.getPgn);
 }

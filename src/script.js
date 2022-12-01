@@ -1,59 +1,64 @@
 // "main" script; passes functions to chessboard config
 /* global Chessboard */
 
-import '../node_modules/jquery/dist/jquery.js'
-import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js'
-import { highlightMoves, removeGreySquares } from './scripts/highlight.js'
-import { Game } from './scripts/game.mjs'
-import { updateStatus } from './scripts/status.js'
+import '../node_modules/jquery/dist/jquery.js';
+import '../node_modules/@chrisoakman/chessboardjs/dist/chessboard-1.0.0.js';
+import { highlightMoves, removeGreySquares } from './scripts/highlight.js';
+import { Game } from './scripts/game.mjs';
+import { updateStatus } from './scripts/status.js';
 
-const myGame = new Game()
-let board = null
+/**
+ * @constant
+ * @type {Game}
+ */
+const myGame = new Game();
+let board = null;
 
-console.log(myGame)
-console.log(myGame.isOver)
-console.log(board)
-
+/**
+ *
+ * @param {String} piece - An html string representing a piece
+ * @returns
+ */
 function onDragStart (piece) {
   // do not pick up pieces if the game is over
-  if (myGame.isOver) return false
+  if (myGame.isOver) return false;
 
   // only pick up current turn player's piece
   if (
     (myGame.playerTurn === 'w' && piece.search(/^b/) !== -1) ||
     (myGame.playerTurn === 'b' && piece.search(/^w/) !== -1)
   ) {
-    return false
+    return false;
   }
 }
 
 function onDrop (source, target) {
-  removeGreySquares()
-  console.log(source, target)
+  removeGreySquares();
+  console.log(source, target);
 
   // see if the move is legal
-  const move = myGame.makeMove(source, target)
+  const move = myGame.makeMove(source, target);
 
   // illegal move
-  if (!move) return 'snapback'
+  if (!move) return 'snapback';
 
-  updateStatus(myGame)
+  updateStatus(myGame);
 }
 
 function onMouseoverSquare (square, piece) {
   // get list of possible moves for this square
-  const moves = myGame.possibleMoves(square)
-  highlightMoves(square, moves)
+  const moves = myGame.possibleMoves(square);
+  highlightMoves(square, moves);
 }
 
 function onMouseoutSquare (square, piece) {
-  removeGreySquares()
+  removeGreySquares();
 }
 
 // update the board position after the piece snap
 // for castling, en passant, pawn promotion
 function onSnapEnd () {
-  board.position(myGame.getFen)
+  board.position(myGame.getFen);
 }
 
 const config = {
@@ -65,12 +70,12 @@ const config = {
   onMouseoutSquare,
   onMouseoverSquare,
   onSnapEnd
-}
+};
 
-board = Chessboard('board', config)
-console.log(board)
-console.log(myGame)
+board = Chessboard('board', config);
+console.log(board);
+console.log(myGame);
 
-updateStatus(myGame)
+updateStatus(myGame);
 
-console.log('Hello, world!')
+console.log('Hello, world!');

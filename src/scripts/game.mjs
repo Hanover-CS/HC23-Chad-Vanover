@@ -1,6 +1,6 @@
 // Game class handles the logic of game state
 
-import { Chess } from '../../node_modules/chess.js/chess.js'
+import { Chess } from '../../node_modules/chess.js/chess.js';
 
 /**
  * The Game class
@@ -11,56 +11,56 @@ export class Game {
    * @param {String} fen - A string for a board position
    */
   constructor (fen) {
-    this.game = new Chess(fen)
+    this.game = new Chess(fen);
   }
 
   /**
    * Returns true if game is over, false otherwise
    */
   get isOver () {
-    return this.game.game_over()
+    return this.game.game_over();
   }
 
   /**
    * Returns 'w' if it's white's turn, 'b' otherwise
    */
   get playerTurn () {
-    return this.game.turn()
+    return this.game.turn();
   }
 
   /**
    * Returns fen string of current board position
    */
   get getFen () {
-    return this.game.fen()
+    return this.game.fen();
   }
 
   /**
    * Returns portable game notation of current game state
    */
   get getPgn () {
-    return this.game.pgn()
+    return this.game.pgn();
   }
 
   /**
    * Returns true if game has ended in checkmate, false otherwise
    */
   get inCheckmate () {
-    return this.game.in_checkmate()
+    return this.game.in_checkmate();
   }
 
   /**
    * Returns true if game is in check state, false otherwise
    */
   get inCheck () {
-    return this.game.in_check()
+    return this.game.in_check();
   }
 
   /**
    * Returns true if game has ended in draw, false otherwise
    */
   get inDraw () {
-    return this.game.in_draw()
+    return this.game.in_draw();
   }
 
   /**
@@ -73,8 +73,8 @@ export class Game {
       from: source,
       to: target,
       promotion: 'q' // TODO
-    })
-    return move != null
+    });
+    return move != null;
   }
 
   /**
@@ -85,6 +85,6 @@ export class Game {
     return this.game.moves({
       square,
       verbose: true
-    })
+    });
   }
 }

@@ -3,14 +3,15 @@
     "browser": true,
     "es2021": true,
     "jquery": true,
-    "mocha": true,
-    "webdriver": true
+    "mocha": true
   },
-  "extends": "standard",
+  "extends": ["standard"],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "semi": ["error", "always"]
+  }
 }
