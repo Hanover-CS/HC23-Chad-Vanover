@@ -1,7 +1,7 @@
 // script for handling highlights on the board
 
 /**
- * module description
+ * Handles legal move highlighting for chessboard
  * @module highlight
  */
 
@@ -23,6 +23,10 @@ export function highlightMoves (square, moves) {
     }
 }
 
+/**
+ * Helper function for highlightMoves
+ * @param {String} square - An html string for a square on a chessboard
+ */
 function greySquare (square) {
     const $square = $('#board .square-' + square);
     $square.addClass('highlight');

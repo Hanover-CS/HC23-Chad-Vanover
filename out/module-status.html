@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: highlight</title>
+    <title>JSDoc: Module: status</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: highlight</h1>
+    <h1 class="page-title">Module: status</h1>
 
     
 
@@ -34,7 +34,7 @@
     <div class="container-overview">
     
         
-            <div class="description">Handles legal move highlighting for chessboard</div>
+            <div class="description">Handles the status strings displayed in the window</div>
         
 
         
@@ -69,7 +69,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="highlight.js.html">highlight.js</a>, <a href="highlight.js.html#line3">line 3</a>
+        <a href="status.js.html">status.js</a>, <a href="status.js.html#line5">line 5</a>
     </li></ul></dd>
     
 
@@ -98,106 +98,26 @@
     
 
     
-
-    
-        <h3 class="subsection-title">Methods</h3>
+        <h3 class="subsection-title">Members</h3>
 
         
             
-
-    
-
-    
-    <h4 class="name" id=".highlightMoves"><span class="type-signature">(static) </span>highlightMoves<span class="signature">(square, moves)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    Highlights squares to represent possible moves
-</div>
+<h4 class="name" id="~$fen"><span class="type-signature">(inner, constant) </span>$fen<span class="type-signature"> :jQuery</span></h4>
 
 
 
 
 
 
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
+    <h5>Type:</h5>
+    <ul>
+        <li>
             
-                <td class="name"><code>square</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
+<span class="param-type">jQuery</span>
 
 
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The square containing a piece</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>moves</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">An array of possible moves</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
+        </li>
+    </ul>
 
 
 
@@ -232,7 +152,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="highlight.js.html">highlight.js</a>, <a href="highlight.js.html#line13">line 13</a>
+        <a href="status.js.html">status.js</a>, <a href="status.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -248,14 +168,68 @@
 
 
 
+        
+            
+<h4 class="name" id="~$pgn"><span class="type-signature">(inner, constant) </span>$pgn<span class="type-signature"> :jQuery</span></h4>
 
 
 
 
 
 
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">jQuery</span>
 
 
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="status.js.html">status.js</a>, <a href="status.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
 
 
 
@@ -264,11 +238,85 @@
 
         
             
+<h4 class="name" id="~$status"><span class="type-signature">(inner, constant) </span>$status<span class="type-signature"> :jQuery</span></h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">jQuery</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
 
     
 
     
-    <h4 class="name" id="~greySquare"><span class="type-signature">(inner) </span>greySquare<span class="signature">(square)</span><span class="type-signature"></span></h4>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="status.js.html">status.js</a>, <a href="status.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id=".updateStatus"><span class="type-signature">(static) </span>updateStatus<span class="signature">(myGame)</span><span class="type-signature"></span></h4>
     
 
     
@@ -276,7 +324,7 @@
 
 
 <div class="description">
-    Helper function for highlightMoves
+    Updates the status strings to the ui
 </div>
 
 
@@ -312,13 +360,13 @@
 
         <tr>
             
-                <td class="name"><code>square</code></td>
+                <td class="name"><code>myGame</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type"><a href="Game.html">Game</a></span>
 
 
             
@@ -328,7 +376,7 @@
 
             
 
-            <td class="description last">An html string for a square on a chessboard</td>
+            <td class="description last">A Game object</td>
         </tr>
 
     
@@ -369,7 +417,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="highlight.js.html">highlight.js</a>, <a href="highlight.js.html#line30">line 30</a>
+        <a href="status.js.html">status.js</a>, <a href="status.js.html#line33">line 33</a>
     </li></ul></dd>
     
 

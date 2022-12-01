@@ -2,10 +2,34 @@
 
 import { Game } from "./game.mjs"
 
+/**
+ * Handles the status strings displayed in the window
+ * @module status
+ */
+
+/**
+ * @constant
+ * @type {jQuery}
+ * @default
+ */
 const $status = $('#status');
+/**
+ * @constant
+ * @type {jQuery}
+ * @default
+ */
 const $fen = $('#fen');
+/**
+ * @constant
+ * @type {jQuery}
+ * @default
+ */
 const $pgn = $('#pgn');
 
+/**
+ * Updates the status strings to the ui
+ * @param {Game} myGame - A Game object
+ */
 export function updateStatus (myGame) {
 
     console.log(myGame);
