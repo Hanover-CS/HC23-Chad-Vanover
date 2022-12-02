@@ -29,8 +29,6 @@ const $pgn = $('#pgn');
  * @param {Game} myGame - A Game object
  */
 export function updateStatus (myGame) {
-  console.log(myGame);
-
   let status = '';
 
   let moveColor = 'White';

@@ -34,7 +34,6 @@ function onDragStart (piece) {
 
 function onDrop (source, target) {
   removeGreySquares();
-  console.log(source, target);
 
   // see if the move is legal
   const move = myGame.makeMove(source, target);
@@ -73,9 +72,5 @@ const config = {
 };
 
 board = Chessboard('board', config);
-console.log(board);
-console.log(myGame);
 
 updateStatus(myGame);
-
-console.log('Hello, world!');
