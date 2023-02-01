@@ -4,8 +4,8 @@ const windows = new Set();
 
 function createWindow() {
     let win = new BrowserWindow({
-        width: 1280,
-        height: 600,
+        width: 1920,
+        height: 1080,
         webPreferences: {
             nodeIntegration: false,
             contextIsolation: false,
