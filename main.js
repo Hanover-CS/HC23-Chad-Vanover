@@ -1,3 +1,5 @@
+// creates browser and loads html into it
+
 const { app, BrowserWindow } = require("electron");
 
 const windows = new Set();
