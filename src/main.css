@@ -11,3 +11,10 @@
 .white-1e1d7.highlight {
     background-color: #a9a9a9;
 }
+
+body {
+    background-image: url("./img/woodbackground.PNG");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
