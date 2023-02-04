@@ -10,3 +10,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+.start {
+    display: flex;
+    justify-content: center;
+    transform: translateY(100%);
+}
+
+.strbtn {
+    height: 40px;
+    width: 150px;
+    font-size: larger;
+    border: 1px;
+    border-radius: 10px;
+}
