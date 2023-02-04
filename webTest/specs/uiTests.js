@@ -1,5 +1,4 @@
 // ui tests
-/* global browser, expect, $$ */
 
 describe('Cheesy', () => {
   it('should initialize properly', async () => {
