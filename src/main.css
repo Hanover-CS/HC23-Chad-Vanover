@@ -20,3 +20,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+.board {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(200px);
+}
