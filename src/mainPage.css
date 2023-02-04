@@ -14,7 +14,9 @@ body {
 .start {
     display: flex;
     justify-content: center;
-    transform: translateY(100%);
+    transform: translateY(900px);
+    border-radius: 10px;
+    margin: 1px;
 }
 
 .strbtn {
