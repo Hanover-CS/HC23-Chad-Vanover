@@ -21,6 +21,7 @@
         "chromedriver": "^109.0.0",
         "cross-env": "^7.0.3",
         "electron": "^21.2.0",
+        "electron-packager": "^17.1.1",
         "eslint": "^8.28.0",
         "eslint-config-standard": "^17.0.0",
         "eslint-plugin-import": "^2.26.0",
