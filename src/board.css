@@ -6,6 +6,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url("./img/woodbackground.PNG");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .black-3c85d.highlight {
     background-color: #696969;
 }
@@ -14,16 +21,17 @@
     background-color: #a9a9a9;
 }
 
-body {
-    background-image: url("./img/woodbackground.PNG");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .board {
     display: flex;
     justify-content: center;
     align-content: center;
-    transform: translateY(200px);
+    /* transform: translateY(200px); */
+}
+
+#status {
+    display: flex;
+    justify-content: center;
+    color: azure;
+    font-size: 60pt;
+    transform: translateY(50px);
 }
