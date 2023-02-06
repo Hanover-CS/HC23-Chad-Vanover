@@ -44,7 +44,7 @@ export function updateStatus (myGame) {
     status = 'Game over, drawn position';
   } else {
     // game still on
-    status = moveColor + ' to move';
+    status = 'It is ' + moveColor + '\'s turn';
     // check?
     if (myGame.inCheck) {
       status += ', ' + moveColor + ' is in check';
@@ -52,6 +52,5 @@ export function updateStatus (myGame) {
   }
 
   $status.html(status);
-  $fen.html(myGame.getFen);
   $pgn.html(myGame.getPgn);
 }
