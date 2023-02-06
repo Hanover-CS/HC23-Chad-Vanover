@@ -17,7 +17,6 @@ let board = null;
 /**
  *
  * @param {String} piece - An html string representing a piece
- * @returns
  */
 function onDragStart (piece) {
   // do not pick up pieces if the game is over
