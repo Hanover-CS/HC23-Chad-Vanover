@@ -35,3 +35,10 @@ body {
     font-size: 60pt;
     transform: translateY(50px);
 }
+
+#info {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20pt;
+    transform: translateY(100px);
+}
