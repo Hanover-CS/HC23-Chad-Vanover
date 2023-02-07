@@ -7,6 +7,8 @@ import { highlightMoves, removeGreySquares } from './scripts/highlight.js';
 import { Game } from './scripts/game.mjs';
 import { updateStatus } from './scripts/status.js';
 
+
+
 /**
  * @constant
  * @type {Game}

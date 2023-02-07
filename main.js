@@ -1,6 +1,6 @@
 // creates browser and loads html into it
 
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow } = require('electron');
 
 const windows = new Set();
 
@@ -30,6 +30,6 @@ app.whenReady().then(() => {
     }
 });
 
-app.on("window-all-closed", () => {
-    if (process.platform !== "darwin") app.quit();
-})
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') app.quit();
+});
