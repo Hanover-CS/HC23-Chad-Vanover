@@ -1,28 +1,28 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url("./img/Artboard 2.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background-image: url('./img/Artboard 2.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .start {
-    display: flex;
-    justify-content: center;
-    transform: translateY(900px);
-    border-radius: 10px;
-    margin: 1px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(900px);
+  border-radius: 10px;
+  margin: 1px;
 }
 
 .strbtn {
-    height: 40px;
-    width: 150px;
-    font-size: larger;
-    border: 1px;
-    border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  font-size: larger;
+  border: 1px;
+  border-radius: 10px;
 }

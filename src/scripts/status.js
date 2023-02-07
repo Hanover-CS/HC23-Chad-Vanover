@@ -44,7 +44,7 @@ export function updateStatus (myGame) {
     status = 'Game over, drawn position';
   } else {
     // game still on
-    status = 'It is ' + moveColor + '\'s turn';
+    status = 'It is ' + moveColor + "'s turn";
     // check?
     if (myGame.inCheck) {
       status += ', ' + moveColor + ' is in check';

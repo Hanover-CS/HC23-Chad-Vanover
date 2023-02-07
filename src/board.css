@@ -1,44 +1,43 @@
 /* Basic css and highlight colors */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url("./img/woodbackground.PNG");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  background-image: url('./img/woodbackground.PNG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .black-3c85d.highlight {
-    background-color: #696969;
+  background-color: #696969;
 }
 
 .white-1e1d7.highlight {
-    background-color: #a9a9a9;
+  background-color: #a9a9a9;
 }
 
 .board {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    /* transform: translateY(200px); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 #status {
-    display: flex;
-    justify-content: center;
-    color: azure;
-    font-size: 60pt;
-    transform: translateY(50px);
+  display: flex;
+  justify-content: center;
+  color: azure;
+  font-size: 60pt;
+  transform: translateY(50px);
 }
 
 #info {
-    display: flex;
-    justify-content: flex-start;
-    font-size: 20pt;
-    transform: translateY(100px);
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20pt;
+  transform: translateY(100px);
 }

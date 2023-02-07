@@ -56,6 +56,8 @@ describe('Cheesy', () => {
     (await $('.square-d7 img')).dragAndDrop($('.square-d5'));
     expect(await $('.square-d5 img')).toExist();
     (await $('.square-e4 img')).dragAndDrop($('.square-d5 img'));
-    expect((await $('.square-d5 img')).getAttribute('data-piece')).toExist('wP');
+    expect((await $('.square-d5 img')).getAttribute('data-piece')).toExist(
+      'wP'
+    );
   });
 });
